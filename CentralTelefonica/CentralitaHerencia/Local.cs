@@ -10,6 +10,8 @@ namespace CentralitaHerencia
     {
         protected float _costo;
 
+        #region Propiedades
+
         public float CostoLlamada
         {
             get
@@ -17,6 +19,10 @@ namespace CentralitaHerencia
                 return this.CalcularCosto();
             }
         }
+
+        #endregion
+
+        #region Constructores
 
         public Local(Llamada unaLlamada, float costo)
             : base(unaLlamada.NroOrigen, unaLlamada.NroDestino, unaLlamada.Duracion)
@@ -30,6 +36,10 @@ namespace CentralitaHerencia
             this._costo = costo;
         }
 
+        #endregion 
+
+        #region Métodos
+
         private float CalcularCosto()
         {
             return this._costo * this.Duracion;
@@ -38,7 +48,13 @@ namespace CentralitaHerencia
         public void MostrarLocal()
         {
             this.MostrarLlamada();
-            Console.WriteLine("Costo de la llamada: " + this.CostoLlamada);
+
+            StringBuilder mySb = new StringBuilder();
+            mySb.AppendLine("Costo de la llamada: " + this.CostoLlamada);
+
+            Console.WriteLine(mySb.ToString());
         }
+
+        #endregion
     }
 }

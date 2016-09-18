@@ -43,6 +43,7 @@
   <ItemGroup>
     <Compile Include="Centralita.cs" />
     <Compile Include="eFranja.cs" />
+    <Compile Include="eTipoLlamada.cs" />
     <Compile Include="Llamada.cs" />
     <Compile Include="Local.cs" />
     <Compile Include="Program.cs" />

@@ -6,8 +6,8 @@ using System.Threading.Tasks;
 
 namespace CentralitaHerencia
 {
-    public enum eFranja
+    public enum eTipoLlamada
     {
-        Franja_1, Franja_2, Franja_3
+        Local, Provincial, Todas
     }
 }

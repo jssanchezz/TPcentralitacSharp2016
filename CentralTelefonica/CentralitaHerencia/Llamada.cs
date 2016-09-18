@@ -12,6 +12,8 @@ namespace CentralitaHerencia
         protected string _nroOrigen;
         protected string _nroDestino;
 
+        #region Propiedades
+
         public float Duracion
         {
             get
@@ -34,6 +36,10 @@ namespace CentralitaHerencia
             }
         }
 
+        #endregion 
+
+        #region Constructores
+
         public Llamada(string origen, string destino, float duracion)
         {
             this._nroOrigen = origen;
@@ -41,16 +47,25 @@ namespace CentralitaHerencia
             this._duracion = duracion;
         }
 
+        #endregion 
+
+        #region Métodos
+
         public void MostrarLlamada()
         {
-            Console.WriteLine("Duracion: " + this._duracion);
-            Console.WriteLine("Origen: " + this._nroOrigen);
-            Console.WriteLine("Destino: " + this._nroDestino);            
+            StringBuilder mySb = new StringBuilder();
+            mySb.AppendLine("Origen: " + this._nroOrigen);
+            mySb.AppendLine("Destino: " + this._nroDestino);
+            mySb.AppendLine("Duracion: " + this._duracion);
+
+            Console.WriteLine(mySb.ToString());
         }
 
         public static int OrdenarPorDuracion(Llamada uno, Llamada dos)
         {
             return string.Compare(uno._duracion.ToString(), dos._duracion.ToString());
         }
+
+        #endregion 
     }
 }
